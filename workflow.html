@@ -436,7 +436,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">5.1</span> Overview</a></li>
-  <li><a href="#general-vs.-embedded-ai" id="toc-general-vs.-embedded-ai" class="nav-link" data-scroll-target="#general-vs.-embedded-ai"><span class="header-section-number">5.2</span> General vs.&nbsp;Embedded AI</a>
+  <li><a href="#traditional-vs.-embedded-ai" id="toc-traditional-vs.-embedded-ai" class="nav-link" data-scroll-target="#traditional-vs.-embedded-ai"><span class="header-section-number">5.2</span> Traditional vs.&nbsp;Embedded AI</a>
   <ul class="collapse">
   <li><a href="#resource-optimization" id="toc-resource-optimization" class="nav-link" data-scroll-target="#resource-optimization"><span class="header-section-number">5.2.1</span> Resource Optimization</a></li>
   <li><a href="#real-time-processing" id="toc-real-time-processing" class="nav-link" data-scroll-target="#real-time-processing"><span class="header-section-number">5.2.2</span> Real-time Processing</a></li>
@@ -487,7 +487,7 @@ Learning Objectives
 <div class="callout-body-container callout-body">
 <ul>
 <li><p>Understand the ML workflow and gain insights into the structured approach and stages involved in developing, deploying, and maintaining machine learning models.</p></li>
-<li><p>Learn about the unique challenges and distinctions between workflows for general machine learning and embedded AI.</p></li>
+<li><p>Learn about the unique challenges and distinctions between workflows for Traditional machine learning and embedded AI.</p></li>
 <li><p>Appreciate the various roles involved in ML projects and understand their respective responsibilities and significance.</p></li>
 <li><p>Understanding the importance, applications, and the considerations for implementing ML models in resource-constrained environments.</p></li>
 <li><p>Gain awareness about the ethical and legal aspects that need to be considered and adhered to in ML and embedded AI projects.</p></li>
@@ -503,16 +503,16 @@ Learning Objectives
 <figcaption class="figure-caption">Multi-step design methodology for the development of a machine learning model. Commonly referred to as the machine learning lifecycle</figcaption>
 </figure>
 </div>
-<p>An ML workflow is a systematic process that encompasses the development, deployment, and maintenance of ML models. The typical steps involved are:</p>
+<p>Developing a successful machine learning model requires a systematic workflow. This end-to-end process enables you to build, deploy and maintain models effectively. It typically involves the following key steps:</p>
 <ol type="1">
-<li><strong>Problem Definition</strong>: Clearly define the problem you aim to solve with your ML model, whether it’s image classification, customer churn prediction, or text generation. This clarity sets the stage for data collection and algorithm selection.</li>
-<li><strong>Data Collection and Preparation</strong>: Gather a high-quality dataset that accurately represents the problem at hand. Data cleaning and preparation are essential steps, which may include outlier removal, missing value imputation, and feature scaling.</li>
-<li><strong>Algorithm Selection</strong>: Choose an ML algorithm that aligns with your data type and problem. Various algorithms have their own pros and cons, making the selection critical.</li>
-<li><strong>Model Training</strong>: Train your chosen ML algorithm on the prepared dataset. The duration of this process can vary based on dataset size and complexity.</li>
-<li><strong>Model Evaluation</strong>: Assess the model’s performance using a separate test set to gauge its generalization capabilities.</li>
-<li><strong>Model Deployment</strong>: Integrate the model into production once its performance meets your criteria. This could involve embedding it into a software application or offering it as a web service.</li>
-<li><strong>Monitoring and Maintenance</strong>: Keep track of the model’s performance post-deployment and update it as necessary to adapt to changing real-world conditions.</li>
+<li><strong>Problem Definition</strong> - Start by clearly articulating the specific problem you want to solve. This focuses your efforts during data collection and model building.</li>
+<li><strong>Data Collection to Preparation</strong> - Gather relevant, high-quality training data that captures all aspects of the problem. Clean and preprocess the data to get it ready for modeling.</li>
+<li><strong>Model Selection and Training</strong> - Choose a machine learning algorithm suited to your problem type and data. Consider pros and cons of different approaches. Feed the prepared data into the model to train it. Training time varies based on data size and model complexity.</li>
+<li><strong>Model Evaluation</strong> - Test the trained model on new unseen data to measure its predictive accuracy. Identify any limitations.</li>
+<li><strong>Model Deployment</strong> - Integrate the validated model into applications or systems to start operationalization.</li>
+<li><strong>Monitor and Maintain</strong> - Track model performance in production. Retrain periodically on new data to keep it current.</li>
 </ol>
+<p>Following this structured <strong>ML workflow</strong> helps guide you through the key phases of development. It ensures you build effective and robust models that are ready for real-world deployment. The end result is higher quality models that solve your business needs.</p>
 <p>The ML workflow is iterative, requiring ongoing monitoring and potential adjustments. Additional considerations include:</p>
 <ul>
 <li><strong>Version Control</strong>: Keep track of code and data changes to reproduce results and revert to earlier versions if needed.</li>
@@ -521,34 +521,34 @@ Learning Objectives
 <li><strong>Security</strong>: Safeguard your workflow and data, particularly when deploying models in production settings.</li>
 </ul>
 </section>
-<section id="general-vs.-embedded-ai" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="general-vs.-embedded-ai"><span class="header-section-number">5.2</span> General vs.&nbsp;Embedded AI</h2>
+<section id="traditional-vs.-embedded-ai" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="traditional-vs.-embedded-ai"><span class="header-section-number">5.2</span> Traditional vs.&nbsp;Embedded AI</h2>
 <p>The ML workflow serves as a universal guide, applicable across various platforms including cloud-based solutions, edge computing, and tinyML. However, the workflow for Embedded AI introduces unique complexities and challenges, which not only make it a captivating domain but also pave the way for remarkable innovations.</p>
 <section id="resource-optimization" class="level3" data-number="5.2.1">
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="resource-optimization"><span class="header-section-number">5.2.1</span> Resource Optimization</h3>
 <ul>
-<li><strong>General ML Workflow</strong>: Prioritizes model accuracy and performance, often leveraging abundant computational resources in cloud or data center environments.</li>
+<li><strong>Traditional ML Workflow</strong>: Prioritizes model accuracy and performance, often leveraging abundant computational resources in cloud or data center environments.</li>
 <li><strong>Embedded AI Workflow</strong>: Requires careful planning to optimize model size and computational demands, given the resource constraints of embedded systems. Techniques like model quantization and pruning are crucial.</li>
 </ul>
 </section>
 <section id="real-time-processing" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="real-time-processing"><span class="header-section-number">5.2.2</span> Real-time Processing</h3>
 <ul>
-<li><strong>General ML Workflow</strong>: Less emphasis on real-time processing, often relying on batch data processing.</li>
+<li><strong>Traditional ML Workflow</strong>: Less emphasis on real-time processing, often relying on batch data processing.</li>
 <li><strong>Embedded AI Workflow</strong>: Prioritizes real-time data processing, making low latency and quick execution essential, especially in applications like autonomous vehicles and industrial automation.</li>
 </ul>
 </section>
 <section id="data-management-and-privacy" class="level3" data-number="5.2.3">
 <h3 data-number="5.2.3" class="anchored" data-anchor-id="data-management-and-privacy"><span class="header-section-number">5.2.3</span> Data Management and Privacy</h3>
 <ul>
-<li><strong>General ML Workflow</strong>: Processes data in centralized locations, often necessitating extensive data transfer and focusing on data security during transit and storage.</li>
+<li><strong>Traditional ML Workflow</strong>: Processes data in centralized locations, often necessitating extensive data transfer and focusing on data security during transit and storage.</li>
 <li><strong>Embedded AI Workflow</strong>: Leverages edge computing to process data closer to its source, reducing data transmission and enhancing privacy through data localization.</li>
 </ul>
 </section>
 <section id="hardware-software-integration" class="level3" data-number="5.2.4">
 <h3 data-number="5.2.4" class="anchored" data-anchor-id="hardware-software-integration"><span class="header-section-number">5.2.4</span> Hardware-Software Integration</h3>
 <ul>
-<li><strong>General ML Workflow</strong>: Typically operates on general-purpose hardware, with software development occurring somewhat independently.</li>
+<li><strong>Traditional ML Workflow</strong>: Typically operates on general-purpose hardware, with software development occurring somewhat independently.</li>
 <li><strong>Embedded AI Workflow</strong>: Involves a more integrated approach to hardware and software development, often incorporating custom chips or hardware accelerators to achieve optimal performance.</li>
 </ul>
 </section>
